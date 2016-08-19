@@ -1,3 +1,23 @@
+#aboutTheAuthor {
+  display: none;
+}
+/**/make sure to display that later^^^
+
+
+
+
 body {
   margin-top: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: #F2DCBD;
+}
+
+button {
+  float: right;
 }
