@@ -1,40 +1,42 @@
 // Begin Business Logic
 
+function pingPong(number) {
+
+  arrayNumbers = [];
+
+  for (var i = 0; i <= number - 1; i++) {
+    arrayNumbers.push(i + 1);
+    if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
+      arrayNumbers.pop();
+      arrayNumbers.push("pingpong");
+    }
+    if (arrayNumbers[i] % 3 === 0) {
+      arrayNumbers.pop();
+      arrayNumbers.push("ping");
+    }
+    if (arrayNumbers[i] % 5 === 0) {
+      arrayNumbers.pop();
+      arrayNumbers.push("pong");
+    }
+  };
+  return arrayNumbers;
+};
+
 // Begin User Interface Logic
 $(document).ready(function() {
   $("form#userInputForm").submit(function(event) {
     event.preventDefault();
 
-    var number = parseInt($("#userNumberInput").val());
-    var arrayNumbers = [];
+    inputNumber = parseInt($("#userNumberInput").val());
 
-
-    for (var i = 0; i <= number - 1; i++) {
-      arrayNumbers.push(i + 1);
-      console.log(arrayNumbers);
-      if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
-        arrayNumbers.pop();
-        arrayNumbers.push("pingpong");
-      }
-      if (arrayNumbers[i] % 3 === 0) {
-        arrayNumbers.pop();
-        arrayNumbers.push("ping");
-      }
-      if (arrayNumbers[i] % 5 === 0) {
-        arrayNumbers.pop();
-        arrayNumbers.push("pong");
-      }
-      $("#output").append("<li>" + arrayNumbers[i] + "</li>");
-    };
-
-
-
-
+    pingPong(inputNumber);
+    $("#output").append("<li>" + arrayNumbers + "</li>");
   });
 });
 
 
-// Satisfies criteria 1-2 and 8a (numbers in a list...)
+
+// THE FOLLOWING ACTUALLY WORKS UGH
 // $(document).ready(function() {
 //   $("form#userInputForm").submit(function(event) {
 //     event.preventDefault();
@@ -44,5 +46,19 @@ $(document).ready(function() {
 //
 //     for (var i = 0; i <= number - 1; i++) {
 //       arrayNumbers.push(i + 1);
-//
-//     }
+//       if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
+//         arrayNumbers.pop();
+//         arrayNumbers.push("pingpong");
+//       }
+//       if (arrayNumbers[i] % 3 === 0) {
+//         arrayNumbers.pop();
+//         arrayNumbers.push("ping");
+//       }
+//       if (arrayNumbers[i] % 5 === 0) {
+//         arrayNumbers.pop();
+//         arrayNumbers.push("pong");
+//       }
+//       $("#output").append("<li>" + arrayNumbers[i] + "</li>");
+//     };
+//   });
+// });
