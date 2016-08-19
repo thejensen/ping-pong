@@ -30,7 +30,7 @@ See http://thejensen.github.io/ping-pong to play!_
 
 ## Known Bugs
 
-_Submit button does not reset the user input from the previous submission._
+_No known bugs._
 
 ## Support and contact details
 
