@@ -30,7 +30,7 @@ $(document).ready(function() {
     inputNumber = parseInt($("#userNumberInput").val());
 
     pingPong(inputNumber);
-    $("#output").append("<li>" + arrayNumbers + "</li>");
+    $("#output").append("<li>" + arrayNumbers[0] + "</li>");
   });
 });
 
