@@ -35,11 +35,17 @@
             </p>
           </div>
           <form id="userInputForm">
-            <div class="form-group" id="userInput">
-              <label for="userNumberInput">Enter your number here:</label>
-              <input id="userNumberInput" type="text" class="form-control">
+            <div class="row">
+              <div class="col-sm-3">
+                <label for="userNumberInput">Enter your number here:</label>
+              </div>
+              <div class="form-group col-sm-4" id="userInput">
+                <input id="userNumberInput" type="text" class="form-control input-sm" required>
+              </div>
+              <div class="col-sm-2">
+                <button type="submit"  class="btn">Ping Pong!</button>
+              </div>
             </div>
-            <button type="submit" class="btn btn-default">Ping Pong!</button>
           </form>
           <div id="outputSection">
             <ul id="outputList">

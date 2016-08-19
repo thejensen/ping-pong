@@ -1,15 +1,36 @@
-body {
-  margin-top: 30px;
-}
-
 h1 {
   text-align: center;
 }
 
 .jumbotron {
-  background-color: #F2DCBD;
+  background-color: #F4DEB5;
+}
+
+h4 {
+  color: #F4DEB5;
+}
+
+h3 {
+  color: black;
+}
+
+#aboutTheAuthor {
+  color: white;
 }
 
 button {
-  float: right;
+  button: gray;
+  padding-left: 10px;
+}
+
+#aboutTheAuthor {
+  background-color: #90BB90;
+}
+
+body {
+  background-color: #E6E6E6;
+}
+
+label {
+  float: left;
 }

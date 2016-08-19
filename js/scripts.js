@@ -27,12 +27,19 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputNumber = parseInt($("#userNumberInput").val());
-    pingPong(inputNumber);
 
-    list = $("#outputList");
-    for (var i = 0; i < arrayNumbers.length; i++) {
-      list.append("<li>" + arrayNumbers[i] + "</li>");
+    if (isNaN(inputNumber) === true) {
+      alert("Please Enter a Number!");
+    } if (inputNumber < 1) {
+      alert("Please Enter a Number 1 or greater!")
+    } else {
+      pingPong(inputNumber);
+      for (var i = 0; i < arrayNumbers.length; i++) {
+        $("#outputList").append("<li>" + arrayNumbers[i] + "</li>");
+        $('html, body').animate( {
+          scrollTop: $("#outputList").offset().top
+        }, 2000);
+      }
     }
-
   });
 });
