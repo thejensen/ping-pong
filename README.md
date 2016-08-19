@@ -12,9 +12,9 @@ _Create a web application that takes a number from a user and returns a range of
 * Numbers divisible by 5 are replaced with "pong"
 * Numbers divisible by 15 are replaced with "ping-pong"
 
-_A user should be able to enter a new number and see new results over and over again.
+_A user should be able to enter a new number and see new results over and over again._
 
-See http://thejensen.github.io/ping-pong to play!_
+_See http://thejensen.github.io/ping-pong to play!_
 
 ## Specs
 
