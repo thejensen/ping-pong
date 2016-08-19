@@ -27,6 +27,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputNumber = parseInt($("#userNumberInput").val());
+    $("#outputList").children().remove();
 
     if (isNaN(inputNumber) === true) {
       alert("Please Enter a Number!");
@@ -40,6 +41,7 @@ $(document).ready(function() {
           scrollTop: $("#outputList").offset().top
         }, 2000);
       }
+      arrayNumbers.length = 0;
     }
   });
 });
