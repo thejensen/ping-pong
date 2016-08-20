@@ -25,6 +25,7 @@ button {
 
 #aboutTheAuthor {
   background-color: #90BB90;
+  padding-bottom:  20em;
 }
 
 body {
@@ -33,4 +34,8 @@ body {
 
 label {
   float: left;
+}
+
+@media (max-width: 480px) {
+  
 }

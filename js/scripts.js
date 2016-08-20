@@ -1,8 +1,8 @@
 // Begin Business Logic
 
-arrayNumbers = [];
 
 function pingPong(number) {
+  var arrayNumbers = [];
   for (var i = 0; i <= number - 1; i++) {
     arrayNumbers.push(i + 1);
     if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
@@ -18,6 +18,7 @@ function pingPong(number) {
       arrayNumbers.push("pong");
     }
   };
+  return arrayNumbers;
 };
 
 // User Interface Logic
@@ -34,14 +35,13 @@ $(document).ready(function() {
     } if (inputNumber < 1) {
       alert("Please Enter a Number 1 or greater!")
     } else {
-      pingPong(inputNumber);
+      arrayNumbers = pingPong(inputNumber);
       for (var i = 0; i < arrayNumbers.length; i++) {
         $("#outputList").append("<li>" + arrayNumbers[i] + "</li>");
         $('html, body').animate( {
           scrollTop: $("#outputList").offset().top
         }, 2000);
       }
-      arrayNumbers.length = 0;
     }
   });
 });
