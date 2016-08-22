@@ -35,7 +35,7 @@ $(document).ready(function() {
     } if (inputNumber < 1) {
       alert("Please Enter a Number 1 or greater!")
     } else {
-      arrayNumbers = pingPong(inputNumber);
+      var arrayNumbers = pingPong(inputNumber);
       for (var i = 0; i < arrayNumbers.length; i++) {
         $("#outputList").append("<li>" + arrayNumbers[i] + "</li>");
         $('html, body').animate( {
